@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}test{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ STATIC_URL }}favicon.ico" type="image/x-icon">
+
+    <!-- Loading Bootstrap v3.2.0 -->
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Loading Flat UI 2.2.0-->
+    <link href="{{ STATIC_URL }}flat-ui/css/flat-ui.css" rel="stylesheet"/>
+
+    <!-- Loading project css -->
+    <link href="{{ STATIC_URL }}css/books.css" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}css/fix-bootstrap.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+        <script src="{{ STATIC_URL }}lib/flat-ui/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src="{{ STATIC_URL }}jquery/jquery.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-large btn-primary btn-collapse" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="fui-menu-24"></span>
+            </a>
+            <a class="brand" href="/">NDC 13</a>
+
+            <div class="btn-group pull-right">
+                <a class="btn btn-large btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+                    test
+                    <span class="username">test</span>
+                    <span class="caret"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<p>test page</p>
+</body>
+{% include "ga.html" %}
+</html>

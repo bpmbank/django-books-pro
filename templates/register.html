@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="span12">
+    </div>
+</div>
+    <div class="col-md-4 col-md-offset-4">
+            <div class="login-form">
+                {% if form.errors %}
+                    <p style="color: red;">
+                        Please correct the error{{ form.errors|pluralize }} below.
+                    </p>
+                {% endif %}
+                {% for item in error %}
+                    <p style="color:red;">{{item}}</p>
+                {% endfor %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                 <div class="form-group">
+                     <input name ="username" type="text" class="form-control login-field" value="" placeholder="名字" id="login-name" />
+                     <label class="login-field-icon fui-user" for="login-name"></label>
+                 </div>
+
+                    <div class="form-group">
+                        <input name = "email" type="text" class="form-control login-field" value="" placeholder="邮箱" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="login-email"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input name = "password" type="password" class="form-control login-field" value="" placeholder="密码" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input name = "password2" type="password" class="form-control login-field" value="" placeholder="确认密码" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                <input type = "submit" class="btn btn-default btn-lg btn-block" value="注册">
+            </form>
+            </div>
+</div>
+{% endblock %}
