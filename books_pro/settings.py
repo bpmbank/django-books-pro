@@ -90,3 +90,5 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+AUTH_PROFILE_MODULE = 'books.UserProfile'
