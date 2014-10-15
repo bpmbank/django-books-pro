@@ -4,7 +4,23 @@
 {% block title %} Book - View {% endblock %}
 
 {% block heading %} <h1> Book</h1><h2>View</h2>  {% endblock %}
-{% block content %} 
+{% block content %}
+        {% for item in book_instance %}
+        <div class="thumb-pad3">
+            <div class="thumbnail">
+                <figure>
+                    <img src="{{item.cover_img}}"/>
+                </figure>
+                <div class="caption">
+                    <h1>{{item.title}}</h1>
+                    <P>作者: {{item.author}}</p>
+                    <div class="intro">
+                        <p>{{item.summary}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
 <table>
 {{ book_instance }}
 </table>

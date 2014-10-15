@@ -14,10 +14,12 @@ from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
 from models import *
 from forms import *
+from models import Book
 
 
 def index(request):  # 用户未登录时的页面
-    list_items = Book.objects.all()
+    list_images = Book.objects.all()
+    paginator = Paginator(list_images, 6)
     return render(request, 'index.html')
     # 采用重定向方法
     #t = get_template('index.html')
@@ -63,7 +65,6 @@ def list_book(request):  # 用户登录后显示书
         page = int(request.GET.get('page', '1'))
     except ValueError:
         page = 1
-
     try:
         list_items = paginator.page(page)
     except:

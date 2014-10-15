@@ -38,6 +38,13 @@ $(window).load(function() {
   <![endif]-->
 <!--header-->
 {% block content %}
+{% for item in list_images.object_list %}
+            <div class="thumbnail">
+                <figure>
+                    <img src="{{item.cover_img}}"/>
+                </figure>
+    </div>
+{% endfor %}
 <div class="global">
     <div class="container">
         <div class="row">
