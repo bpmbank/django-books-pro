@@ -18,13 +18,13 @@ from models import Book
 
 
 def index(request):  # 用户未登录时的页面
-    list_images = Book.objects.all()
-    paginator = Paginator(list_images, 6)
-    return render(request, 'index.html')
+    list_items = Book.objects.all()
+    paginator = Paginator(list_items, 6)
+    #return render(request, 'index.html')
     # 采用重定向方法
-    #t = get_template('index.html')
-    #c = RequestContext(request, locals())
-    #return HttpResponse(t.render(c))
+    t = get_template('index.html')
+    c = RequestContext(request, locals())
+    return HttpResponse(t.render(c))
 
 
 def login_validate(request, username, password):  # 判断用户是否登陆

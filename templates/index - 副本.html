@@ -38,28 +38,101 @@ $(window).load(function() {
   <![endif]-->
 <!--header-->
 {% block content %}
+{% for item in list_items.object_list %}
+            <div class="thumbnail">
+                <figure>
+                    <img src="{{item.cover_img}}"/>
+                </figure>
+    </div>
+{% endfor %}
 <div class="global">
     <div class="container">
         <div class="row">
             <section class="col-lg-9 col-md-9 col-sm-9 libBox">
-                <h2>新书速递</h2>
-                <a href="{% url "login" %}">更多</a>
+                <h2>新书快递</h2>
+                <a href="index.html#">更多</a>
                 <div class="row">
-                    {% for item in list_items %}
-                    <article class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
                         <div class="thumb-pad1 maxheight">
                             <div class="thumbnail">
-                                <figure><a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}" alt=""></a></figure>
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic1.jpg" alt=""></figure>
                                 <div class="caption">
-                                    <p>{{item.title}}</p>
+                                    <a href="index.html#">Marta Healy</a>
+                                    <br>
                                     <hr>
-                                    <p>评分: <font color="red">{{item.rating}}</font></p>
-                                    <p>{{item.author}}</p>
+                                    <p>Sed in lacus ut enim adipiscing<br>aliquet</p>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    {% endfor %}
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="thumb-pad1 maxheight">
+                            <strong>new</strong>
+                            <div class="thumbnail">
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic2.jpg" alt=""></figure>
+                                <div class="caption">
+                                    <a href="index.html#">Anete Puga</a>
+                                    <br>
+                                    <hr>
+                                    <p>Donec in velit vel ipsum auc<br>tor pulvinar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="thumb-pad1 maxheight">
+                            <div class="thumbnail">
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic3.jpg" alt=""></figure>
+                                <div class="caption">
+                                    <a href="index.html#">Gloria Mann</a>
+                                    <br>
+                                    <hr>
+                                    <p>Suspendisse sollicitudin<br>velit sed leo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="thumb-pad1 maxheight">
+                            <strong>new</strong>
+                            <div class="thumbnail">
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic4.jpg" alt=""></figure>
+                                <div class="caption">
+                                    <a href="index.html#">Laura Stegner</a>
+                                    <br>
+                                    <hr>
+                                    <p>In faucibus orci luctus et<br>Ultrices posuere cubilia urae</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="thumb-pad1 maxheight">
+                            <div class="thumbnail">
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic5.jpg" alt=""></figure>
+                                <div class="caption">
+                                    <a href="index.html#">Chandra Vancova</a>
+                                    <br>
+                                    <hr>
+                                    <p>Vestibulum ante ipsum primiss<br>ut enim adipiscing aliquet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="thumb-pad1 maxheight">
+                            <strong>new</strong>
+                            <div class="thumbnail">
+                                <figure><img src="{{ STATIC_URL }}img/page1_pic6.jpg" alt=""></figure>
+                                <div class="caption">
+                                    <a href="index.html#">Linda Grey</a>
+                                    <br>
+                                    <hr>
+                                    <p>Sed in lacus ut enim adipiscing<br>aliquet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </section>
             <article class="col-lg-3 col-md-3 col-sm-3">

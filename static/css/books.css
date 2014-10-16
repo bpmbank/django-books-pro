@@ -1,4 +1,7 @@
 html, body{ height:100%;padding:0; margin:0;  }
+.col-lg-2 {
+    width: 20%;
+}
 
 .login-form {
   position: relative;

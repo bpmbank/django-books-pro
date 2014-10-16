@@ -5,23 +5,25 @@
 
 {% block heading %} <h1> Book</h1><h2>View</h2>  {% endblock %}
 {% block content %}
-        {% for item in book_instance %}
         <div class="thumb-pad3">
             <div class="thumbnail">
                 <figure>
-                    <img src="{{item.cover_img}}"/>
+                    <img src="{{book_instance.cover_img}}"/>
                 </figure>
                 <div class="caption">
-                    <h1>{{item.title}}</h1>
-                    <P>作者: {{item.author}}</p>
+                    <h1>书名: {{book_instance.title}}</h1>
+                    <P>副标题: {{book_instance.subtitle}}</p>
+                    <P>评分: {{book_instance.rating}}</p>
+                    <P>作者: {{book_instance.author}}</p>
+                    <P>译者: {{book_instance.translator}}</p>
+                    <P>出版日期: {{book_instance.pubdate}}</p>
+                    <P>页数: {{book_instance.pages}}</p>
+                    <P>定价: {{book_instance.price}}</p>
                     <div class="intro">
-                        <p>{{item.summary}}</p>
+                        <p>{{book_instance.author_intro}}</p>
+                        <p>{{book_instance.title}}简介：{{book_instance.summary}}</p>
                     </div>
                 </div>
             </div>
         </div>
-    {% endfor %}
-<table>
-{{ book_instance }}
-</table>
 {% endblock %}

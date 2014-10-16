@@ -4,24 +4,19 @@
     <div class="article">
         <a class="btn btn-success" href="{% url 'books_app.views.create_book' %}"> <span class=" icon-plus icon-white" ></span>增加图书 </a>
     </div>
-    {% for item in list_items.object_list %}jex
+    {% for item in list_items.object_list %}
         <div class="thumb-pad3">
             <div class="thumbnail">
                 <figure>
-                    <img src="{{item.cover_img}}"/>
+                    <a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}"/></a>
                 </figure>
                 <div class="caption">
                     <h1>{{item.title}}</h1>
-                    <P>作者: {{item.author}}</p>
+                    <P>作者: {{item.author}}——评分: {{item.rating}}——出版日期: {{item.pubdate}}</p>
                     <div class="intro">
                         <p>{{item.summary}}</p>
                     </div>
                 </div>
-                <p>
-                    <a class="btn btn-info" href="{% url 'books_app.views.view_book' item.id %}"><span class=" icon-check icon-white" ></span>详细 </a>
-                    <a class="btn btn-danger" href="{% url 'books_app.views.edit_book' item.id %}"> <span class=" icon-check icon-white" ></span>修改 </a>
-                    <a class="btn btn-danger" href="#"> <span class=" icon-check icon-white" ></span>归还 </a>
-                </p>
             </div>
         </div>
     {% endfor %}
