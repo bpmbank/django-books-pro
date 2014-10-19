@@ -1,3 +1,4 @@
+# coding: utf8
 """
 Django settings for ccread_pro project.
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books_app',
+    #'south', django1.7不要用south http://scriptogr.am/pison/post/some-questions-of-djang1.7
     'django-groundwork',
     'bootstrap_pagination',
 )
