@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     #'south', django1.7不要用south http://scriptogr.am/pison/post/some-questions-of-djang1.7
     'django-groundwork',
     'bootstrap_pagination',
+    'userprofile',
 )
 
 MIDDLEWARE_CLASSES = (
