@@ -52,7 +52,6 @@ $(window).load(function() {
                                 <figure><a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}" alt=""></a></figure>
                                 <div class="caption">
                                     <p>{{item.title}}</p>
-                                    <hr>
                                     <p>评分: <font color="red">{{item.rating}}</font></p>
                                     <p>{{item.author}}</p>
                                 </div>
@@ -63,10 +62,6 @@ $(window).load(function() {
                 </div>
             </section>
             <article class="col-lg-3 col-md-3 col-sm-3">
-                <form id="search" class="search" action="http://livedemo00.template-help.com/wt_48144/search.php" method="GET" accept-charset="utf-8">
-                     <input type="text" name="s" value="Search" onFocus="if (this.value == 'Search') {this.value=''}" onBlur="if (this.value == '') {this.value='Search'}">
-                     <a href="index.html#" onClick="document.getElementById('search').submit()"><img src="{{ STATIC_URL }}img/magnify.png" alt=""></a>
-                </form>
                 <h3><span class="fa fa-star"></span>NEW & NOTABLE</h3>
                 <ul class="list2">
                     <li><a href="index.html#">Recent Activity</a></li>

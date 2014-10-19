@@ -1,4 +1,9 @@
-html, body{ height:100%;padding:0; margin:0;  }
+html, body{
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
 .col-lg-2 {
     width: 20%;
 }
@@ -9,37 +14,27 @@ html, body{ height:100%;padding:0; margin:0;  }
 }
 
 .row-nav-btn{
-    margin-top: 20px;
+    margin: 25px 0 0;
+    padding: 0;
+    float: right;
 }
 
-.sponsor{
-    text-align: center;
+/*  搜索条距离顶部的间距*/
+.navbar-form{
+    margin: 20px 0 0;
 }
 
-.box {
-    width: 20%;
-    display: inline-block;
-    font-size: 32px;
-    float:left;
-    margin-top: 8px;
-    color: white;
-    text-align: center;
-}
-.box-blue {
-    background: #00b0de;
-}
-.box-pink {
-    background: #dc3a74;
-}
-.box-green {
-    background: #b9d136;
-}
-.box-yellow {
-    background: #efa92b;
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 35px;
 }
 
 .intro p {
     text-indent: 2em;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 p {

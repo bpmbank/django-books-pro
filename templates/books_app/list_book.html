@@ -1,11 +1,9 @@
 {% extends "base.html" %}
+{% load bootstrap_pagination %}
 {% block title %} 虫虫读书 - 书单 {% endblock %}
 {% block content %}
     <div class="row">
     <section class="col-lg-9 col-md-9 col-sm-9 libBox">
-    <div class="article">
-        <a class="btn btn-success" href="{% url 'books_app.views.create_book' %}"> <span class=" icon-plus icon-white" ></span>增加图书 </a>
-    </div>
     {% for item in list_items.object_list %}
         <div class="thumb-pad3">
             <div class="thumbnail">
@@ -13,8 +11,8 @@
                     <a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}"/></a>
                 </figure>
                 <div class="caption">
-                    <h1>{{item.title}}</h1>
-                    <P>作者: {{item.author}}——评分: {{item.rating}}——出版日期: {{item.pubdate}}</p>
+                    <a href="{% url 'books_app.views.view_book' item.id %}"><h2>{{item.title}}</h2></a>
+                    <p>作者: {{item.author}}——评分: {{item.rating}}——出版日期: {{item.pubdate}}</p>
                     <div class="intro">
                         <p>{{item.summary|truncatechars:100}}</p>
                     </div>
@@ -22,24 +20,13 @@
             </div>
         </div>
     {% endfor %}
-    <div class="row-fluid">
-        {% if list_items.has_previous %}
-            <a href="?page={{ list_items.previous_page_number }}">上一页</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ list_items.number }} of {{ list_items.paginator.num_pages }}.
-        </span>
-        {% if list_items.has_next %}
-            <a href="?page={{ list_items.next_page_number }}">下一页</a>
-        {% endif %}
-    </div>
+        <div class="text-center">
+            <ul class="pagination pagination-lg">
+                            {% bootstrap_paginate list_items range=10 show_prev_next="false" show_first_last="true" %}
+            </ul>
+        </div>
     </section>
                 <article class="col-lg-3 col-md-3 col-sm-3">
-                <form id="search" class="search" action="http://livedemo00.template-help.com/wt_48144/search.php" method="GET" accept-charset="utf-8">
-                     <input type="text" name="s" value="Search" onFocus="if (this.value == 'Search') {this.value=''}" onBlur="if (this.value == '') {this.value='Search'}">
-                     <a href="index.html#" onClick="document.getElementById('search').submit()"><img src="{{ STATIC_URL }}img/magnify.png" alt=""></a>
-                </form>
                 <h3><span class="fa fa-star"></span>NEW & NOTABLE</h3>
                 <ul class="list2">
                     <li><a href="index.html#">Recent Activity</a></li>

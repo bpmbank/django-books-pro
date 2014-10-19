@@ -15,6 +15,7 @@ from django.core.urlresolvers import reverse
 from models import *
 from forms import *
 from models import Book
+import bootstrap_pagination
 
 
 def index(request):  # 用户未登录时的页面

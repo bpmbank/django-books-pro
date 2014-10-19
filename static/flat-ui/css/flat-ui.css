@@ -4018,6 +4018,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
 .pager li > span span + [class*="fui-"] {
   margin-left: 8px;
   }
+  /*
 .pagination {
   position: relative;
   display: block;
@@ -4566,7 +4567,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   }
 .pagination-dropdown.dropup {
   position: relative;
-  }
+  }*/
 .caret {
   display: inline-block;
   width: 0;
