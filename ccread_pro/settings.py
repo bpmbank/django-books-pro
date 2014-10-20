@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django-groundwork',
     'bootstrap_pagination',
     'userprofile',
+    'django_markdown',
 )
 
 MIDDLEWARE_CLASSES = (
