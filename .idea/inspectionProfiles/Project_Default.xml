@@ -24,7 +24,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="17">
+          <list size="22">
             <item index="0" class="java.lang.String" itemvalue="dj-database-url" />
             <item index="1" class="java.lang.String" itemvalue="Django" />
             <item index="2" class="java.lang.String" itemvalue="psycopg2" />
@@ -42,6 +42,11 @@
             <item index="14" class="java.lang.String" itemvalue="Pillow" />
             <item index="15" class="java.lang.String" itemvalue="django-markdown" />
             <item index="16" class="java.lang.String" itemvalue="Markdown" />
+            <item index="17" class="java.lang.String" itemvalue="six" />
+            <item index="18" class="java.lang.String" itemvalue="django-guardian" />
+            <item index="19" class="java.lang.String" itemvalue="html2text" />
+            <item index="20" class="java.lang.String" itemvalue="django-userena" />
+            <item index="21" class="java.lang.String" itemvalue="easy-thumbnails" />
           </list>
         </value>
       </option>

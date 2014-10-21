@@ -43,8 +43,12 @@ INSTALLED_APPS = (
     #'south', django1.7不要用south http://scriptogr.am/pison/post/some-questions-of-djang1.7
     'django-groundwork',
     'bootstrap_pagination',
-    'userprofile',
     'django_markdown',
+    'userena',
+    'guardian',
+    'easy_thumbnails',
+    'accounts',
+    'userena.contrib.umessages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +67,24 @@ TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
 )
+
+
+
+AUTHENTICATION_BACKENDS = (
+    'userena.backends.UserenaAuthenticationBackend',
+    'guardian.backends.ObjectPermissionBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+ANONYMOUS_USER_ID = -1
+
+# 使用UserenaProfile
+AUTH_PROFILE_MODULE = 'accounts.MyProfile'
+# 設定預設的登入登出URL, 有別於Django預設的"/accounts/profile/", "/accounts/login/", "/accounts/logout/".
+LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
+
 
 ROOT_URLCONF = 'ccread_pro.urls'
 
