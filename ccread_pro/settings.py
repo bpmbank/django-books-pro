@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-import django.conf.global_settings as DEFAULT_SETTINGS
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books_app',
-    #'south', django1.7不要用south http://scriptogr.am/pison/post/some-questions-of-djang1.7
+    'south',  # django1.7不要用south http://scriptogr.am/pison/post/some-questions-of-djang1.7
     'django-groundwork',
     'bootstrap_pagination',
     'django_markdown',
@@ -60,15 +61,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+TEMPLATE_CONTEXT_PROCESSORS = TEMPLATE_CONTEXT_PROCESSORS + (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
 )
-
-
 
 AUTHENTICATION_BACKENDS = (
     'userena.backends.UserenaAuthenticationBackend',
@@ -79,12 +78,12 @@ AUTHENTICATION_BACKENDS = (
 ANONYMOUS_USER_ID = -1
 
 # 使用UserenaProfile
-AUTH_PROFILE_MODULE = 'accounts.MyProfile'
+AUTH_PROFILE_MODULE = 'accounts.Profile'
 # 設定預設的登入登出URL, 有別於Django預設的"/accounts/profile/", "/accounts/login/", "/accounts/logout/".
 LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
 LOGIN_URL = '/accounts/signin/'
+LOGIN_URL = '/accounts/signup/'
 LOGOUT_URL = '/accounts/signout/'
-
 
 ROOT_URLCONF = 'ccread_pro.urls'
 
@@ -127,3 +126,12 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# dummy for testing purpose
+# EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yongyuanstu@gmail.com'
+EMAIL_HOST_PASSWORD = '198805010501'

@@ -1,0 +1,51 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<div class="col-md-4 col-md-offset-4">
+<div class="login-form">
+<form action="" method="post">
+  {% csrf_token %}
+  <fieldset>
+    {{ form.non_field_errors }}
+      {# {% for field in form %}#}
+                   <div class="form-group">
+                       <input name ="username" type="text" class="form-control login-field" value="" placeholder="名字" id="login-name" />
+                       <label class="login-field-icon fui-user" for="id_username"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input name = "email" type="text" class="form-control login-field" value="" placeholder="邮箱" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="id_email"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input name = "password1" type="password" class="form-control login-field" value="" placeholder="密码" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="id_password1"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input name = "password2" type="password" class="form-control login-field" value="" placeholder="确认密码" id="login-pass" />
+                        <label class="login-field-icon fui-lock" for="id_password2"></label>
+                    </div>
+    {{ field.errors }}
+    {% comment %} Displaying checkboxes differently {% endcomment %}
+    {% if field.name == 'tos' %}
+    <p class="checkbox">
+    <label for="id_{{ field.name }}">{{ field }} {{ field.label }}</label>
+    </p>
+    {% else %}
+    <p>
+    {{ field.label_tag }} 
+    {{ field }}
+    </p>
+    {% endif %}
+    {# {% endfor %} #}
+  </fieldset>
+    <input type="submit" class="btn btn-default btn-lg btn-block" value="{% trans "注册"%}" />
+</form>
+</div>
+</div>
+{% endblock %}
