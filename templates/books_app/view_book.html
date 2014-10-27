@@ -5,25 +5,59 @@
 
 {% block heading %} <h1> Book</h1><h2>View</h2>  {% endblock %}
 {% block content %}
-        <div class="thumb-pad3">
-            <div class="thumbnail">
-                <figure>
-                    <img src="{{book_instance.cover_img}}"/>
-                </figure>
-                <div class="caption">
-                    <h1>书名: {{book_instance.title}}</h1>
-                    <P>副标题: {{book_instance.subtitle}}</p>
-                    <P>评分: {{book_instance.rating}}</p>
-                    <P>作者: {{book_instance.author}}</p>
-                    <P>译者: {{book_instance.translator}}</p>
-                    <P>出版日期: {{book_instance.pubdate}}</p>
-                    <P>页数: {{book_instance.pages}}</p>
-                    <P>定价: {{book_instance.price}}</p>
+        <div class="row">
+            <section class="col-lg-9 col-md-9 col-sm-9 libBox">
+                <div class="thumb-pad3">
+                    <div class="pull-left ">
+                        <img src="{{book_instance.cover_img}}" style="margin: 20px 0 20px 20px;"/>
+                    </div>
+                    <div id="info" class="">
+                            <span class="pl">书名: {{book_instance.title}}</span><br>
+                            <span class="pl">副标题: {{book_instance.subtitle}}</span><br>
+                            <span class="pl">评分: {{book_instance.rating}}</span><br>
+                            <span class="pl">作者: {{book_instance.author}}</span><br>
+                            <span class="pl">译者: {{book_instance.translator}}</span><br>
+                            <span class="pl">出版日期: {{book_instance.pubdate}}</span><br>
+                            <span class="pl">页数: {{book_instance.pages}}</span><br>
+                            <span class="pl">定价: {{book_instance.price}}</span><br>
+                    </div>
                     <div class="intro">
-                        <p>{{book_instance.author_intro}}</p>
-                        <p><<{{book_instance.title}}>>简介：{{book_instance.summary}}</p>
+                            <p>{{book_instance.author_intro}}</p>
+                            <p><<{{book_instance.title}}>>简介：{{book_instance.summary}}</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+                <article class="col-lg-3 col-md-3 col-sm-3">
+                <h3><span class="fa fa-star"></span>NEW & NOTABLE</h3>
+                <ul class="list2">
+                    <li><a href="index.html#">Recent Activity</a></li>
+                    <li><a href="index.html#">New Titles</a></li>
+                    <li><a href="index.html#">Award Winners</a></li>
+                    <li><a href="index.html#">Bestsellers</a></li>
+                </ul>
+                <h3><span class="fa fa-asterisk"></span>COLLECTIONS</h3>
+                <ul class="list2">
+                    <li><a href="index.html#">Books</a></li>
+                    <li><a href="index.html#">E-books & Audiobooks</a></li>
+                    <li><a href="index.html#">Movies</a></li>
+                    <li><a href="index.html#">Music & Recordings</a></li>
+                    <li><a href="index.html#">Periodicals</a></li>
+                    <li><a href="index.html#">Images</a></li>
+                    <li><a href="index.html#">Braille & Talking Books</a></li>
+                </ul>
+                <div class="locationBox">
+                    <h3><span class="fa fa-map-marker"></span>Location</h3>
+                    <p>8901 Marmora Road,<br>Glasgow, D04 89GR.</p>
+                </div>
+                <div class="locationBox">
+                    <h3><span class="fa fa-user"></span>Admission</h3>
+                    <p>Free</p>
+                </div>
+                <div class="locationBox">
+                    <h3><span class="fa fa-clock-o"></span>Open</h3>
+                    <p>10 am - 9 pm daily</p>
+                </div>
+            </article>
+    </div>
+    </div>
 {% endblock %}

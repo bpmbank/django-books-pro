@@ -30,6 +30,11 @@ html, body{
     margin-bottom: 35px;
 }
 
+.intro {
+    float: left;
+    margin-top: 60px;
+}
+
 .intro p {
     text-indent: 2em;
 }
@@ -353,4 +358,29 @@ h1 {
     display: inline-block;
     margin: 0 0 5px;
     text-transform: uppercase;
+}
+
+
+/*豆瓣*/
+
+
+#mainpic {
+    float: left;
+    text-align: center;
+    margin: 3px 12px 0px 0px;
+    max-width: 155px;
+    overflow: hidden;
+}
+
+#info {
+    float: left;
+    max-width: 248px;
+    margin-left: 30px;
+    margin-top: 20px;
+    word-break: break-all;
+}
+
+.pl {
+    font: 12px/150% Arial,Helvetica,sans-serif;
+    color: #666;
 }

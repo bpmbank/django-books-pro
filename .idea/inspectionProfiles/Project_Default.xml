@@ -2,6 +2,17 @@
   <profile version="1.0" is_locked="false">
     <option name="myName" value="Project Default" />
     <option name="myLocal" value="false" />
+    <inspection_tool class="CssUnknownProperty" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myCustomPropertiesEnabled" value="true" />
+      <option name="myIgnoreVendorSpecificProperties" value="false" />
+      <option name="myCustomPropertiesList">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="transition" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
@@ -16,7 +27,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="16">
+          <list size="25">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -33,6 +44,15 @@
             <item index="13" class="java.lang.String" itemvalue="login-form" />
             <item index="14" class="java.lang.String" itemvalue="form-group" />
             <item index="15" class="java.lang.String" itemvalue="white-box" />
+            <item index="16" class="java.lang.String" itemvalue="global" />
+            <item index="17" class="java.lang.String" itemvalue="row" />
+            <item index="18" class="java.lang.String" itemvalue="container" />
+            <item index="19" class="java.lang.String" itemvalue="thumb-pad3" />
+            <item index="20" class="java.lang.String" itemvalue="subjectwrap" />
+            <item index="21" class="java.lang.String" itemvalue="subject" />
+            <item index="22" class="java.lang.String" itemvalue="indent" />
+            <item index="23" class="java.lang.String" itemvalue="intro" />
+            <item index="24" class="java.lang.String" itemvalue="pull-left" />
           </list>
         </value>
       </option>
