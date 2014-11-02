@@ -1,6 +1,10 @@
+/*
+ The front loads very slow, better to comment them
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900);
 @import url(//fonts.googleapis.com/css?family=Pacifico);
 @import url(//fonts.googleapis.com/css?family=Sanchez:400italic,400);
+*/
+
 body {
 	background: #f1f3f4 url(../img/pattern.png) repeat;
 	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
