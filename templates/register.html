@@ -1,5 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+<div id="anony-reg">
+    <div class="wrapper">
+        <div class="login">
+            {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
+            {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
+            <a class="btn btn-default" href="{% url "userena_signin" %}">登录</a><i></i>
+            {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
+        </form>
+        </div>
+        <div class="reg">
+            <a class="lnk-reg" href="{% url "register" %}">加入我们<i>注册</i></a>
+            <div class="nb-info">
+                <b>发现更多好书</b>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="span12">
     </div>

@@ -10,8 +10,8 @@ html, body{
 
 .login-form {
   position: relative;
-  margin-top: 18%;
-  margin-bottom: 36%;
+  margin-top: 10%;
+  /*margin-bottom: 36%;*/
 }
 
 .row-nav-btn{
@@ -383,4 +383,61 @@ h1 {
 .pl {
     font: 12px/150% Arial,Helvetica,sans-serif;
     color: #666;
+}
+
+/*仿照豆瓣下一栏的登陆*/
+#anony-reg {
+    margin-bottom: 25px;
+    background: none repeat scroll 0% 0% #E8EDF1;
+}
+
+#anony-reg .wrapper {
+    padding: 20px 0px 10px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 950px;
+    margin: 0px auto;
+}
+
+.container { margin: 0 auto; width: 950px; }
+
+#anony-reg .login {
+    float: right;
+    text-align: right;
+    font-size: 0px;
+    letter-spacing: -0.31em;
+}
+
+#anony-reg .lnk-reg:link, #anony-reg .lnk-reg:visited, #anony-reg .lnk-reg:hover, #anony-reg .lnk-reg:active {
+    font-size: 14px;
+    color: #FFF;
+    background: none repeat scroll 0% 0% #EF7360;
+}
+#anony-reg .lnk-reg {
+    display: inline-block;
+    padding: 7px 18px;
+    vertical-align: top;
+    margin-right: 15px;
+    border-radius: 2px;
+}
+
+#anony-reg .lnk-reg i {
+    font-size: 12px;
+}
+
+#anony-books{
+    background: none repeat scroll 0% 0% #F7F7F7;
+}
+
+#anony-reg .nb-info {
+    display: inline-block;
+    color: #666;
+    vertical-align: bottom;
+}
+
+.section{
+	padding:10px 0;
+	margin-bottom:30px;
+	min-height:200px
 }

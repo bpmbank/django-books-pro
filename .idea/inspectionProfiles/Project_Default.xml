@@ -27,7 +27,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="29">
+          <list size="35">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -57,6 +57,12 @@
             <item index="26" class="java.lang.String" itemvalue="input-group" />
             <item index="27" class="java.lang.String" itemvalue="input-group-btn" />
             <item index="28" class="java.lang.String" itemvalue="menubox" />
+            <item index="29" class="java.lang.String" itemvalue="pull-right" />
+            <item index="30" class="java.lang.String" itemvalue="wrapper" />
+            <item index="31" class="java.lang.String" itemvalue="login" />
+            <item index="32" class="java.lang.String" itemvalue="secition" />
+            <item index="33" class="java.lang.String" itemvalue="nb-info" />
+            <item index="34" class="java.lang.String" itemvalue="reg" />
           </list>
         </value>
       </option>

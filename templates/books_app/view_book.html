@@ -5,7 +5,42 @@
 
 {% block heading %} <h1> Book</h1><h2>View</h2>  {% endblock %}
 {% block content %}
-        <div class="row">
+{% if user.is_authenticated %}
+<div id="anony-reg">
+    <div class="wrapper">
+        <div class="login">
+            {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
+            {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
+            {#<a class="btn btn-default" href="{% url "userena_signin" %}">购书单</a>#}
+            {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
+        </form>
+        </div>
+        <div class="reg">
+            <a class="lnk-reg" href="{% url 'books_app.views.booklist' %}">书单</a>
+            <a class="btn-success pull-right" href="{% url "logout" %}">注销</a>
+        </div>
+    </div>
+</div>
+{% else %}
+    <div id="anony-reg">
+    <div class="wrapper">
+        <div class="login">
+            {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
+            {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
+            <a class="btn btn-default" href="{% url "userena_signin" %}">登录</a><i></i>
+            {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
+        </form>
+        </div>
+        <div class="reg">
+            <a class="lnk-reg" href="{% url "register" %}">加入我们<i>注册</i></a>
+            <div class="nb-info">
+                <b>发现更多好书</b>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+        <div class="container">
             <section class="col-lg-9 col-md-9 col-sm-9 libBox">
                 <div class="thumb-pad3">
                     <div class="pull-left ">

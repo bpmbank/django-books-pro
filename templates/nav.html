@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="row">
     <header class="clearfix">
         <div class="container">
@@ -10,37 +11,28 @@
                     </div>
                 </div>
             </form>
-            {% if user.is_authenticated %}
+            {# {% if user.is_authenticated %} #}
                 <div class="menuBox clearfix">
                     <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
                         <ul class="nav sf-menu clearfix">
                             <li class="active"><a href="{% url 'books_app.views.list_book' %}">首页</a></li>
                             <li ><a href="{% url 'books_app.views.wereview' %}">书评</a></li>
-                            <li><a href="{% url 'books_app.views.booklist' %}">书单</a></li>
                         </ul>
                     </nav>
                 </div>
-                    <ul class="nav navbar-nav pull-right">
+                    <!--<ul class="nav navbar-nav pull-right">
                         <div class="row-nav-btn">
                             <li class="dropdown">
                                 <a class="dropdown-toggle btn btn-default" data-toggle="dropdown">{{ user.username }}
                                     <b class="caret"></b></a>
                                 <ul class="dropdown-menu" style="min-width: 100px" >
-                                    <li><a href="{% url 'userena_profile_detail' user.username %}" style="text-align: center">资料</a></li>
+                                    <li><a href="{# {% url 'userena_profile_detail' user.username %} #}" style="text-align: center">资料</a></li>
                                     <li><a href="{% url "logout" %}" style="text-align: center">注销</a></li>
                                 </ul>
                             </li>
                         </div>
-                    </ul>
-                {% else%}
-                <ul class="head_list">
-                    {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
-                    {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
-                    <li><a class="btn btn-primary" href="{% url "userena_signin" %}">登录 </a></li>
-                    <li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>
-                    {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
-                </ul>
-                {% endif %}
+                    </ul>-->
+                {# {% endif %} #}
         </div>
     </header>
 </div>

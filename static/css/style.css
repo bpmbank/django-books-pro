@@ -9,7 +9,7 @@ body {
 	/*background: #f1f3f4 url(../img/pattern.png) repeat;*/
 	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
 	line-height: 1.428571429;
-    background: none repeat scroll 0% 0% #F7F7F7;
+    /*background: none repeat scroll 0% 0% #F7F7F7;*/
 }
 a {
 	text-decoration: none;
@@ -255,15 +255,13 @@ nav.tm_navbar .sub-menu > ul li > ul li a:hover {
 /*-----content-----*/
 header {
 	padding: 0 20px 13px 20px;
-	margin-bottom: 25px;
 	background: #ffffff;
 }
 .head_list {
-	margin: 0;
-	padding: 0;
+    padding: 0;
 	list-style: none;
 	float: right;
-	margin-top: 25px;
+    margin: 25px 0 0;
 }
 .head_list li {
 	float: left;

@@ -1,44 +1,41 @@
 {% extends "base.html" %}
+{% load i18n %}
 <title>{% block title %}虫虫读书 - 与世界一起品读好书{% endblock %}</title>
-<script>
-$(window).load(function() {
-    $(function() {
-            $('#foo1').carouFredSel({
-				auto: false,
-				responsive: true,
-				width: '100%',
-				scroll: 1,
-                pagination  : "#foo2_pag",
-				items: {
-					height: 'auto',
-					width:370,
-					visible: {
-						min: 1,
-						max: 1
-					}
-				},
-				mousewheel: true,
-				swipe: {
-					onMouse: true,
-					onTouch: true
-				}
-			});
-		});
-    });
-</script>
-<!--[if lt IE 9]>
-    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
-  <![endif]-->
-  <!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
-<!--header-->
 {% block content %}
-<div class="global">
+{% if user.is_authenticated %}
+<div id="anony-reg">
+    <div class="wrapper">
+        <div class="login">
+            {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
+            {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
+            {#<a class="btn btn-default" href="{% url "userena_signin" %}">购书单</a>#}
+            {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
+        </div>
+        <div class="reg">
+            <a class="lnk-reg" href="{% url 'books_app.views.booklist' %}">书单</a>
+            <a class="btn-success pull-right" href="{% url "logout" %}">注销</a>
+        </div>
+    </div>
+</div>
+{% else %}
+    <div id="anony-reg">
+    <div class="wrapper">
+        <div class="login">
+            {#<li><a class="btn btn-primary" href="{% url "login" %}">登录 </a></li>#}
+            {#<li><a class="btn btn-default" href="{% url "register" %}">注册</a></li>#}
+            <a class="btn btn-default" href="{% url "userena_signin" %}">登录</a><i></i>
+            {# <li><a class="btn btn-default" href="{% url "userena_signup" %}">注册</a></li> #}
+        </div>
+        <div class="reg">
+            <a class="lnk-reg" href="{% url "register" %}">加入我们<i>注册</i></a>
+            <div class="nb-info">
+                <b>发现更多好书</b>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<div id="anony-books" class="secition">
     <div class="container">
         <div class="row">
             <section class="col-lg-9 col-md-9 col-sm-9 libBox">
