@@ -6,10 +6,10 @@
 */
 
 body {
-	background: #f1f3f4 url(../img/pattern.png) repeat;
+	/*background: #f1f3f4 url(../img/pattern.png) repeat;*/
 	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
 	line-height: 1.428571429;
-	color: #2e2e2e;
+    background: none repeat scroll 0% 0% #F7F7F7;
 }
 a {
 	text-decoration: none;
@@ -33,13 +33,17 @@ p {
 	margin-bottom: 4px;
 	line-height: 30px;
 }
+
+/*nav brand attribute,     margin: 13px 79px 0 0; the 79px not good*/
 h1.navbar-brand_ {
     padding: 0;
 	float: left;
 	position: relative;
 	z-index: 1;
-    margin: 13px 79px 0 0;
+    margin: 13px 10px 0 0;
 }
+/**/
+
 h1.navbar-brand_ a {
 	display: block;
 }
