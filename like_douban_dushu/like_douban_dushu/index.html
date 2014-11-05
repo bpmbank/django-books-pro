@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	#like_douban{
+		width:520px;
+		margin:50px auto;
+	}
+	#list{
+		width:520px;
+		margin-left:420px;
+	}
+	#list .page{
+		width:9px;
+		height:7px;
+		float:left;
+		margin-top:12px;
+		margin-left:3px;
+		overflow:hidden;
+		cursor:pointer;
+		background:url(switch_dot_small.jpg) 0px 0px;
+	}
+	#list #back,#list #next{
+		width:25px;
+		height:32px;
+		float:left;
+	}
+	#list #back{
+		background:url(left_right.gif) 0px 32px;
+	}
+	#list #next{
+		background:url(left_right.gif) 30px 0px;
+		cursor:pointer;
+	}
+	#shelf{
+		width:520px;
+		margin:15px 0px 0px 0px;
+		height:150px;
+		position:relative;
+		overflow:hidden;
+	}
+	#images{
+		width:2100px;
+		height:150px;
+		position:relative;
+		left:0px;
+	}
+	#shelf img{
+		width:100px;
+		height:150px;
+		dispaly:block;
+		float:left;
+		margin-right:5px;
+	}
+	#clear{
+		clear:both;
+	}
+	#author{
+		position:absolute;
+		bottom:40px;
+		right:40px;
+		color:#0066cc;
+		font-weight:bold;
+		font-family:微软雅黑;
+	}
+</style>
+
+</head>
+
+<body>
+<div id="like_douban">
+	<div id="list">
+		<div class="page"></div>
+		<div class="page"></div>
+		<div class="page"></div>
+		<div class="page"></div>
+		<div id="back" src="left_right.gif" title="后退"></div>
+		<div id="next" src="left_right.gif" title="前进"></div>
+		<div id="clear"></div>
+	</div>
+	<div id="shelf">
+		<div id="images">
+		<img src="imgs/1.jpg"/>
+		<img src="imgs/2.jpg"/>
+		<img src="imgs/3.jpg"/>
+		<img src="imgs/4.jpg"/>
+		<img src="imgs/5.jpg"/>
+		<img src="imgs/6.jpg"/>
+		<img src="imgs/7.jpg"/>
+		<img src="imgs/8.jpg"/>
+		<img src="imgs/9.jpg"/>
+		<img src="imgs/10.jpg"/>
+		<img src="imgs/11.jpg"/>
+		<img src="imgs/12.jpg"/>
+		<img src="imgs/13.jpg"/>
+		<img src="imgs/14.jpg"/>
+		<img src="imgs/15.jpg"/>
+		<img src="imgs/16.jpg"/>
+		<img src="imgs/17.jpg"/>
+		<img src="imgs/18.jpg"/>
+		<img src="imgs/19.jpg"/>
+		<img src="imgs/20.jpg"/>
+		</div>
+	</div>
+</div>
+<a href="http://gulangfish.com" id="author" target="_blank">鼓浪鱼前端博客</a>
+<script type="text/javascript">
+	var next=document.getElementById("next");
+	var images=document.getElementById("images");
+	var interval;
+	var back=document.getElementById("back");
+	var next=document.getElementById("next");
+	var left=0;
+	var pages=getElementsByClassName('list','div','page');
+	var cur_page=0;
+	var isFwd=false;
+	var slide=new Slide();
+	back.onclick=function(){
+		if(cur_page > 0 && cur_page < 4){
+			cur_page--;			
+			clearInterval(interval);
+			slide.forward();			
+		}
+	}
+	next.onclick=function(){
+		if(cur_page < 3){
+		cur_page++;
+		clearInterval(interval);
+		slide.next();
+	}
+	}
+	for(var i=0;i<pages.length;i++){
+		pages[i].index=i;
+		pages[i].onclick=function(){
+			slide.jumpTo(this.index);
+		}
+	}
+	changeFlag();
+	function Slide(){
+		this.forward=function(){
+			isFwd=true;
+			changeFlag();
+			clearInterval(interval);
+			interval=setInterval(function(){
+				if(left < -cur_page*525){
+					left+=25;
+					images.style.left=left+"px";
+				}else{
+					clearInterval(interval);
+				}
+			},20);
+		},
+		this.next=function(){
+			isFwd=false;
+			changeFlag();
+			clearInterval(interval);
+			interval=setInterval(function(){
+				if(left > -525*cur_page && cur_page<4){
+					left-=25;			
+					images.style.left =left+"px";
+				}else{
+					clearInterval(interval);
+				}
+			},20);
+		}
+		this.jumpTo=function(page){
+			cur_page=page;
+			changeFlag();
+			if(left>-525*cur_page){
+				clearInterval(interval);
+				interval=setInterval(function(){
+					if(left > -525*cur_page){
+						left-=25;			
+						images.style.left =left+"px";
+					}else{
+					clearInterval(interval);
+					}
+				},20);
+			}else{
+				clearInterval(interval);
+				interval=setInterval(function(){
+					if(left < -525*cur_page){
+						left+=25;			
+						images.style.left =left+"px";
+					}else{
+						clearInterval(interval);
+					}
+				},20);
+			}
+		}
+	}
+	function changeFlag(){
+		for(var i=0;i<pages.length;i++){
+			pages[i].style.background="url(switch_dot_small.jpg) 0px 0px";
+		}
+		pages[cur_page].style.background="url(switch_dot_small.jpg) 8px 0px";
+		switch(cur_page){
+			case 0:
+				back.style.background="url(left_right.gif) 0px 32px";
+				next.style.background="url(left_right.gif) 30px 0px";
+				back.style.cursor="auto";
+				break;
+			case 3:
+				next.style.background="url(left_right.gif) 30px 32px";
+				back.style.background="url(left_right.gif) 0px 0px";
+				next.style.cursor="auto";
+				break;
+			default:
+				back.style.cursor="pointer";
+				next.style.cursor="pointer";
+				back.style.background="url(left_right.gif) 0px 0px";
+				next.style.background="url(left_right.gif) 30px 0px";
+		}
+		
+	}
+	function getElementsByClassName(fatherId,tagName,className){
+		node = fatherId&&document.getElementById(fatherId) || document;
+		tagName = tagName || "*";
+		className = className.split(" ");
+		var classNameLength = className.length;
+		for(var i=0,j=classNameLength;i<j;i++){
+			//创建匹配类名的正则
+			className[i]= new RegExp("(^|\\s)" + className[i].replace(/\-/g, "\\-") + "(\\s|$)"); 
+		}
+		var elements = node.getElementsByTagName(tagName);
+		var result = [];
+		for(var i=0,j=elements.length,k=0;i<j;i++){//缓存length属性
+			var element = elements[i];
+			while(className[k++].test(element.className)){//优化循环
+				if(k === classNameLength){
+					result[result.length] = element;
+					break;
+				}	
+			}
+			k = 0;
+		}
+		return result;
+	}
+</script>
+</body>
+</html>
