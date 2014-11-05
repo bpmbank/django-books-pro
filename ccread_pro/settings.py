@@ -80,7 +80,8 @@ ANONYMOUS_USER_ID = -1
 # 使用UserenaProfile
 AUTH_PROFILE_MODULE = 'accounts.Profile'
 # 設定預設的登入登出URL, 有別於Django預設的"/accounts/profile/", "/accounts/login/", "/accounts/logout/".
-LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+# LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/signin/'
 LOGIN_URL = '/accounts/signup/'
 LOGOUT_URL = '/accounts/signout/'
