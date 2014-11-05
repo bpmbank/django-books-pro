@@ -30,11 +30,6 @@ html, body{
     margin-bottom: 35px;
 }
 
-.intro {
-    float: left;
-    margin-top: 60px;
-}
-
 .intro p {
     text-indent: 2em;
 }
@@ -372,14 +367,6 @@ h1 {
     overflow: hidden;
 }
 
-#info {
-    float: left;
-    max-width: 248px;
-    margin-left: 30px;
-    margin-top: 20px;
-    word-break: break-all;
-}
-
 .pl {
     font: 12px/150% Arial,Helvetica,sans-serif;
     color: #666;
@@ -440,4 +427,53 @@ h1 {
 	padding:10px 0;
 	margin-bottom:30px;
 	min-height:200px
+}
+
+
+/**set view book*/
+.article {
+    float: left;
+    padding-right: 40px;
+}
+
+#viewbook{
+    padding-left: 0px;
+}
+
+/*设置显示书籍属性样式*/
+#info {
+    float: left;
+    max-width: 248px;
+    margin-left: 30px;
+    word-break: break-all;
+}
+
+/**设置view页书籍标题**/
+h1 {
+    word-wrap: break-word;
+    font-size: 25px;
+    font-weight: bold;
+    color: #494949;
+    line-height: 1.1;
+}
+
+body, td, th {
+    font: 12px/1.62 Helvetica,Arial,sans-serif;
+}
+
+/*view页显示数据内容介绍*/
+.intro {
+    float: left;
+    margin-top: 20px;
+}
+
+.h2 {
+    color: #111;
+}
+.h2 {
+    font: 15px/150% Arial,Helvetica,sans-serif;
+}
+
+.ebook-promotion {
+    border-top: 1px solid #E4E4E4;
 }

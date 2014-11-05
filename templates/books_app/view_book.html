@@ -1,7 +1,7 @@
 
 {% extends "base.html" %}
 
-{% block title %} Book - View {% endblock %}
+{% block title %} {{book_instance.subtitle}}(虫虫读书) {% endblock %}
 
 {% block heading %} <h1> Book</h1><h2>View</h2>  {% endblock %}
 {% block content %}
@@ -40,14 +40,14 @@
     </div>
 </div>
 {% endif %}
-        <div class="container">
-            <section class="col-lg-9 col-md-9 col-sm-9 libBox">
-                <div class="thumb-pad3">
+    <div class="container">
+        <section id="viewbook" class="col-lg-9 col-md-9 col-sm-9 libBox">
+            <div class="article">
+                <h1>{{book_instance.title}}</h1>
                     <div class="pull-left ">
-                        <img src="{{book_instance.cover_img}}" style="margin: 20px 0 20px 20px;"/>
+                        <img src="{{book_instance.cover_img}}" />
                     </div>
                     <div id="info" class="">
-                            <span class="pl">书名: {{book_instance.title}}</span><br>
                             <span class="pl">副标题: {{book_instance.subtitle}}</span><br>
                             <span class="pl">评分: {{book_instance.rating}}</span><br>
                             <span class="pl">作者: {{book_instance.author}}</span><br>
@@ -56,9 +56,26 @@
                             <span class="pl">页数: {{book_instance.pages}}</span><br>
                             <span class="pl">定价: {{book_instance.price}}</span><br>
                     </div>
+
                     <div class="intro">
-                            <p>{{book_instance.author_intro}}</p>
-                            <p><<{{book_instance.title}}>>简介：{{book_instance.summary}}</p>
+                        <div class="ebook-promotion">
+
+                        </div>
+                        <h2 style="color: #072">
+                            <span class="">内容简介</span>
+                            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                        </h2>
+                        <p><<{{book_instance.title}}>>简介：{{book_instance.summary}}</p>
+                        <h2 style="color: #072">
+                            <span class="">作者简介</span>
+                            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                        </h2>
+                        <p>{{book_instance.author_intro}}</p>
+                        <h2 style="color: #072">
+                            <span class="">书评</span>
+                            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                        </h2>
+                        <p></p>
                     </div>
                 </div>
             </section>
