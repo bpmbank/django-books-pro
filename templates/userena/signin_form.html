@@ -51,7 +51,7 @@
     {% endif %}
     {# {% endfor %} #}
   </fieldset>
-  <input type="submit" class="btn btn-lg btn-primary btn-block" value="{% trans "登录" %}" />
+  <input type="submit" class="btn btn-lg btn-info btn-block" value="{% trans "登录" %}" />
   <p class="forgot-password"><a href="{% url 'userena_password_reset' %}" title="{% trans 'Forgot your password?' %}">{% trans "忘记密码?" %}</a></p>
   {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
 </form>
