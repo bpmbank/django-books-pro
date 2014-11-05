@@ -477,3 +477,49 @@ body, td, th {
 .ebook-promotion {
     border-top: 1px solid #E4E4E4;
 }
+
+
+
+/*http://blog.koalite.com/bbg/设置搜索按钮颜色*/
+.btn-gray {
+  color: #FFFFFF;
+  background-color: #B3AFAF;
+}
+
+.btn-gray:hover,
+.btn-gray:focus,
+.btn-gray:active,
+.btn-gray.active,
+.open .dropdown-toggle.btn-gray {
+  color: #FFFFFF;
+  background-color: #A1A1A1;
+}
+
+.btn-gray:active,
+.btn-gray.active,
+.open .dropdown-toggle.btn-gray {
+  background-image: none;
+}
+
+.btn-gray.disabled,
+.btn-gray[disabled],
+fieldset[disabled] .btn-gray,
+.btn-gray.disabled:hover,
+.btn-gray[disabled]:hover,
+fieldset[disabled] .btn-gray:hover,
+.btn-gray.disabled:focus,
+.btn-gray[disabled]:focus,
+fieldset[disabled] .btn-gray:focus,
+.btn-gray.disabled:active,
+.btn-gray[disabled]:active,
+fieldset[disabled] .btn-gray:active,
+.btn-gray.disabled.active,
+.btn-gray[disabled].active,
+fieldset[disabled] .btn-gray.active {
+  background-color: #B3AFAF;
+}
+
+.btn-gray .badge {
+  color: #B3AFAF;
+  background-color: #FFFFFF;
+}
