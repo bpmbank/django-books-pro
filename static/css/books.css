@@ -523,3 +523,8 @@ fieldset[disabled] .btn-gray.active {
   color: #B3AFAF;
   background-color: #FFFFFF;
 }
+
+/*首页封面*/
+.section {
+    margin-bottom: 50px;
+}

@@ -255,7 +255,8 @@ nav.tm_navbar .sub-menu > ul li > ul li a:hover {
 /*-----content-----*/
 header {
 	padding: 0 20px 13px 20px;
-	background: #ffffff;
+	/*background: #ffffff;*/
+    background: none repeat scroll 0% 0% #F6F6F1;
 }
 .head_list {
     padding: 0;
@@ -869,16 +870,20 @@ footer ul li a:hover {
 .teamBox .thumb-pad1 {
 	margin-bottom: 30px;
 }
+
+/*注释部分删掉图片外框*/
 .thumb-pad1 {
 	overflow: hidden;
-	padding: 6px 6px 17px 6px;
-	margin-bottom: 30px;
+	padding: 6px 6px 4px 6px;
+	/*margin-bottom: 30px;
 	background: #ffffff;
 	-webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
 	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
 	-webkit-transition: all 0.35s ease;
-	transition: all 0.35s ease;
+	transition: all 0.35s ease;*/
 }
+
+
 .thumb-pad1 strong {
 	position: absolute;
 	z-index: 1;

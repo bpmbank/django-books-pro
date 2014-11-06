@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 <title>{% block title %}虫虫读书 - 与世界一起品读好书{% endblock %}</title>
+
 {% block content %}
 {% if user.is_authenticated %}
 <div id="anony-reg">
@@ -38,45 +39,49 @@
 
 <div id="anony-books" class="secition">
     <div class="container">
-        <div class="row">
-            <section class="col-lg-9 col-md-9 col-sm-9 libBox">
+            <section id="viewbook" class="col-lg-9 col-md-9 col-sm-9 libBox">
+            <div class="article">
+            <div class="secition">
                 <h2>新书速递</h2>
                 <a href="">更多</a>
-                <div class="row">
-                    {% for item in list_items %}
-                    <article class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                        <div class="thumb-pad1 maxheight">
-                            <div class="thumbnail">
-                                <a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}" alt=""></a>
-                                <div class="caption">
-                                    <p>{{item.title}}</p>
-                                    <p>评分: <font color="red">{{item.rating}}</font></p>
-                                    <p>{{item.author}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
 
+                <div id="list">
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div class="page"></div>
+                    <div id="back" src="{{ STATIC_URL }}img/left_right.gif" title="后退"></div>
+                    <div id="next" src="{{ STATIC_URL }}img/left_right.gif" title="前进"></div>
+                    <div id="clear"></div>
+                </div>
+                <div id="shelf">
+                    <div id="images">
+                        {% for item in list_items %}
+                            <a href="{% url 'books_app.views.view_book' item.id %}"><img src="{{item.cover_img}}" alt=""></a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </section>
             <article class="col-lg-3 col-md-3 col-sm-3">
                 <h3><span class="fa fa-star"></span>虫虫读书榜</h3>
                 <ul class="list2">
-                    <li><a href="index.html#">月度阅读之星</a></li>
-                    <li><a href="index.html#">年度阅读冠军</a></li>
+                    <li><a href="index.html#">月度最佳</a></li>
+                    <li><a href="index.html#">年度最佳</a></li>
                     <li><a href="index.html#">Award Winners</a></li>
-                    <li><a href="index.html#">必读书单</a></li>
+                    <li><a href="index.html#">Bestsellers</a></li>
                 </ul>
-                <h3><span class="fa fa-asterisk"></span>书单推荐</h3>
+                <h3><span class="fa fa-asterisk"></span>COLLECTIONS</h3>
                 <ul class="list2">
-                    <li><a href="index.html#">每月10本</a></li>
+                    <li><a href="index.html#">Books</a></li>
                     <li><a href="index.html#">E-books & Audiobooks</a></li>
                     <li><a href="index.html#">Movies</a></li>
                     <li><a href="index.html#">Music & Recordings</a></li>
                     <li><a href="index.html#">Periodicals</a></li>
                     <li><a href="index.html#">Images</a></li>
-                    <li><a href="index.html#">必读书单250</a></li>
+                    <li><a href="index.html#">Braille & Talking Books</a></li>
                 </ul>
                 <div class="locationBox">
                     <h3><span class="fa fa-map-marker"></span>线下活动</h3>
@@ -166,4 +171,139 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+
+<script type="text/javascript">
+	var next=document.getElementById("next");
+	var images=document.getElementById("images");
+	var interval;
+	var back=document.getElementById("back");
+	var next=document.getElementById("next");
+	var left=0;
+	var pages=getElementsByClassName('list','div','page');
+	var cur_page=0;
+	var isFwd=false;
+	var slide=new Slide();
+	back.onclick=function(){
+		if(cur_page > 0 && cur_page < 4){
+			cur_page--;
+			clearInterval(interval);
+			slide.forward();
+		}
+	}
+	next.onclick=function(){
+		if(cur_page < 3){
+		cur_page++;
+		clearInterval(interval);
+		slide.next();
+	}
+	}
+	for(var i=0;i<pages.length;i++){
+		pages[i].index=i;
+		pages[i].onclick=function(){
+			slide.jumpTo(this.index);
+		}
+	}
+	changeFlag();
+	function Slide(){
+		this.forward=function(){
+			isFwd=true;
+			changeFlag();
+			clearInterval(interval);
+			interval=setInterval(function(){
+				if(left < -cur_page*525){
+					left+=25;
+					images.style.left=left+"px";
+				}else{
+					clearInterval(interval);
+				}
+			},20);
+		},
+		this.next=function(){
+			isFwd=false;
+			changeFlag();
+			clearInterval(interval);
+			interval=setInterval(function(){
+				if(left > -525*cur_page && cur_page<4){
+					left-=25;
+					images.style.left =left+"px";
+				}else{
+					clearInterval(interval);
+				}
+			},20);
+		}
+		this.jumpTo=function(page){
+			cur_page=page;
+			changeFlag();
+			if(left>-525*cur_page){
+				clearInterval(interval);
+				interval=setInterval(function(){
+					if(left > -525*cur_page){
+						left-=25;
+						images.style.left =left+"px";
+					}else{
+					clearInterval(interval);
+					}
+				},20);
+			}else{
+				clearInterval(interval);
+				interval=setInterval(function(){
+					if(left < -525*cur_page){
+						left+=25;
+						images.style.left =left+"px";
+					}else{
+						clearInterval(interval);
+					}
+				},20);
+			}
+		}
+	}
+	function changeFlag(){
+		for(var i=0;i<pages.length;i++){
+			pages[i].style.background="url(switch_dot_small.jpg) 0px 0px";
+		}
+		pages[cur_page].style.background="url(switch_dot_small.jpg) 8px 0px";
+		switch(cur_page){
+			case 0:
+				back.style.background="url(left_right.gif) 0px 32px";
+				next.style.background="url(left_right.gif) 30px 0px";
+				back.style.cursor="auto";
+				break;
+			case 3:
+				next.style.background="url(left_right.gif) 30px 32px";
+				back.style.background="url(left_right.gif) 0px 0px";
+				next.style.cursor="auto";
+				break;
+			default:
+				back.style.cursor="pointer";
+				next.style.cursor="pointer";
+				back.style.background="url(left_right.gif) 0px 0px";
+				next.style.background="url(left_right.gif) 30px 0px";
+		}
+
+	}
+	function getElementsByClassName(fatherId,tagName,className){
+		node = fatherId&&document.getElementById(fatherId) || document;
+		tagName = tagName || "*";
+		className = className.split(" ");
+		var classNameLength = className.length;
+		for(var i=0,j=classNameLength;i<j;i++){
+			//创建匹配类名的正则
+			className[i]= new RegExp("(^|\\s)" + className[i].replace(/\-/g, "\\-") + "(\\s|$)");
+		}
+		var elements = node.getElementsByTagName(tagName);
+		var result = [];
+		for(var i=0,j=elements.length,k=0;i<j;i++){//缓存length属性
+			var element = elements[i];
+			while(className[k++].test(element.className)){//优化循环
+				if(k === classNameLength){
+					result[result.length] = element;
+					break;
+				}
+			}
+			k = 0;
+		}
+		return result;
+	}
+</script>
+
 {% endblock %}
