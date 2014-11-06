@@ -7,7 +7,7 @@
 
 body {
 	/*background: #f1f3f4 url(../img/pattern.png) repeat;*/
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 1.428571429;
     /*background: none repeat scroll 0% 0% #F7F7F7;*/
 }
@@ -49,13 +49,13 @@ h1.navbar-brand_ a {
 }
 h2 {
 	color: #2e2e2e;
-	font: bold 14px/39px 'Open Sans';
+	font: bold 14px/39px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0 0 4px 0;
 	text-transform: uppercase;
 }
 h3 {
 	color: #2e2e2e;
-	font: 300 14px/39px 'Open Sans';
+	font: 300 14px/39px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0 0 7px 0;
 	text-transform: uppercase;
 }
@@ -109,7 +109,7 @@ nav.tm_navbar li a {
 	position: relative;
 	padding: 29px 17px 11px 16px;
 	text-transform: none;
-	font: 14px 'Open Sans';
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	background: transparent;
 	letter-spacing: -1px;
@@ -176,7 +176,7 @@ nav.tm_navbar .sub-menu > ul li a {
 	float: none;
 	padding-left: 29px;
 	letter-spacing: -1px;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	background: transparent;
 	-webkit-transition: all 0.35s ease;
@@ -236,7 +236,7 @@ nav.tm_navbar .sub-menu ul ul li a {
 	float: none;
 	padding-left: 29px;
 	letter-spacing: -1px;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	background: transparent;
 	-webkit-transition: all 0.35s ease;
@@ -270,7 +270,7 @@ header {
 	line-height: 30px;
 }
 .head_list li a {
-	font: 14px 'Open Sans';
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	padding: 5px 10px 6px 10px;
 	background: transparent;
@@ -289,13 +289,13 @@ footer {
 	overflow: hidden;
 }
 footer p {
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	float: left;
 	margin-bottom: 0;
 }
 footer a {
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -357,7 +357,7 @@ footer ul li a:hover {
 	position: relative;
 }
 .newsBox time a {
-	font: bold 13px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 13px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #000000;
 	text-transform: uppercase;
 	display: inline-block;
@@ -398,7 +398,7 @@ footer ul li a:hover {
 	margin-bottom: 26px;
 }
 .opportunitiesBox .title {
-	font: 15px 'Open Sans';
+	font: 15px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #3e454c;
 	margin-bottom: 15px;
 }
@@ -409,7 +409,7 @@ footer ul li a:hover {
 	margin-bottom: 30px;
 }
 .libBox > a {
-	font: 300 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 300 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	float: right;
 	position: absolute;
@@ -462,7 +462,7 @@ footer ul li a:hover {
 	padding: 0 110px;
 }
 .list_carousel1 #foo1 > li p {
-	font: italic 14px/24px 'Sanchez';
+	font: italic 14px/24px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	margin-bottom: 9px;
 }
@@ -481,7 +481,7 @@ footer ul li a:hover {
 	margin-right: 9px;
 }
 .list_carousel1 #foo1 > li strong {
-	font: bold 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #f43b60;
 	position: relative;
 	top: -2px;
@@ -542,7 +542,7 @@ footer ul li a:hover {
 	border-bottom: 4px solid #d5dada;
 }
 .clientBox .title {
-	font: 900 14px 'Roboto';
+	font: 900 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #535b60;
 	text-transform: uppercase;
 	margin-bottom: 10px;
@@ -599,7 +599,7 @@ footer ul li a:hover {
 }
 .testimBox span {
 	color: #b0b0b0;
-	font: 10px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 10px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	display: block;
 	text-transform: uppercase;
 }
@@ -617,7 +617,7 @@ footer ul li a:hover {
 }
 .testimBox a {
 	color: #2d2d2d;
-	font: bold 24px/24px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 24px/24px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	display: inline-block;
 	text-transform: uppercase;
 	-webkit-transition: all 0.25s ease;
@@ -637,7 +637,7 @@ footer ul li a:hover {
 .videoBox .title {
 	margin: 0;
 	color: #2d2d2d;
-	font: bold 24px/20px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 24px/20px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	text-transform: uppercase;
 }
 .packagesBox {
@@ -761,13 +761,13 @@ footer ul li a:hover {
 	margin-top: 30px;
 }
 .hundredBox strong {
-	font: bold 60px/47px 'Open Sans';
+	font: bold 60px/47px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 	margin-bottom: 0;
 	display: block;
 }
 .hundredBox p {
-	font: 600 24px/29px 'Open Sans';
+	font: 600 24px/29px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 }
 .projectBox {
@@ -814,7 +814,7 @@ footer ul li a:hover {
 	margin-bottom: 27px;
 }
 .projectBox .box1 .title2 {
-	font: 14px/22px 'Open Sans';
+	font: 14px/22px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #7d7d7d;
 }
 .projectBox figure {
@@ -896,7 +896,7 @@ footer ul li a:hover {
 	background: #f43b60;
 	border-radius: 49px;
 	text-align: center;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -922,7 +922,7 @@ footer ul li a:hover {
 	text-align: center;
 }
 .thumb-pad1 .thumbnail .caption a {
-	font: 300 14px 'Open Sans';
+	font: 300 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 }
 .thumb-pad1 .thumbnail .caption a:hover {
@@ -962,7 +962,7 @@ footer ul li a:hover {
 	margin-bottom: 8px;
 }
 .eventsBox > a {
-	font: 300 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 300 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	float: right;
 	position: absolute;
@@ -996,7 +996,7 @@ footer ul li a:hover {
 	background: #f43b60;
 	border-radius: 49px;
 	text-align: center;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -1072,7 +1072,7 @@ footer ul li a:hover {
 	background: #f43b60;
 	border-radius: 49px;
 	text-align: center;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -1092,7 +1092,7 @@ footer ul li a:hover {
 	color: #2e2e2e;
 }
 .thumb-pad3 .thumbnail .caption .lnk {
-	font: 300 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 300 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	display: inline-block;
 	margin-bottom: 13px;
@@ -1167,7 +1167,7 @@ footer ul li a:hover {
 }
 .thumb-pad5 .thumbnail .caption a {
 	color: #2e2e2e;
-	font: bold 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	display: inline-block;
 	margin-bottom: 7px;
 	-webkit-transition: all 0.25s ease;
@@ -1215,7 +1215,7 @@ footer ul li a:hover {
 	border-radius: 0;
 	background: none;
 	width: 70px;
-	font: 300 66px/55px 'Open Sans';
+	font: 300 66px/55px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #333745;
 	text-align: center;
 	float: left;
@@ -1230,7 +1230,7 @@ footer ul li a:hover {
 	line-height: 20px;
 }
 .thumb-pad6 .thumbnail .badgeBox p > .lnk {
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	text-transform: none;
 }
@@ -1263,7 +1263,7 @@ footer ul li a:hover {
 }
 .thumb-pad6 .thumbnail .badgeBox a {
 	color: #272727;
-	font: 16px/22px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 16px/22px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0;
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -1369,13 +1369,13 @@ footer ul li a:hover {
 	overflow: hidden;
 }
 .thumb-pad10 .thumbnail .caption time {
-	font: 16px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 16px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #a2c9c2;
 	display: block;
 }
 .thumb-pad10 .thumbnail .caption a {
 	color: #383838;
-	font: 16px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 16px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	display: inline-block;
 	margin-bottom: 20px;
 	-webkit-transition: all 0.25s ease;
@@ -1391,7 +1391,7 @@ footer ul li a:hover {
 	box-shadow: none;
 	position: relative;
 	padding: 6px 14px;
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0;
 	letter-spacing: 0;
 	text-shadow: none;
@@ -1415,7 +1415,7 @@ footer ul li a:hover {
 	box-shadow: none;
 	position: relative;
 	padding: 5px 17px;
-	font: 13px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 13px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0;
 	letter-spacing: 0;
 	text-shadow: none;
@@ -1468,7 +1468,7 @@ footer ul li a:hover {
 	text-decoration: none !important;
 	padding: 4px 35px;
 	border: none;
-	font: 600 24px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 600 24px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0;
 	text-transform: uppercase;
 	letter-spacing: 0;
@@ -1496,7 +1496,7 @@ footer ul li a:hover {
 	margin-bottom: 43px;
 }
 .events-list li time a {
-	font: bold 13px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 13px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #000000;
 	text-transform: uppercase;
 	display: inline-block;
@@ -1530,7 +1530,7 @@ footer ul li a:hover {
 	background: url(../img/list_point.png) left 6px no-repeat;
 }
 .list1 li a {
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -1556,7 +1556,7 @@ footer ul li a:hover {
 	margin-bottom: 7px;
 }
 .list2 li a {
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	font-weight: 300;
 	color: #2e2e2e;
 	-webkit-transition: all 0.25s ease;
@@ -1583,7 +1583,7 @@ footer ul li a:hover {
 	margin-top: 0;
 }
 .list3 li time {
-	font: 900 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 900 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	float: left;
 	margin-right: 5px;
@@ -1653,7 +1653,7 @@ footer ul li a:hover {
 	padding-top: 6px;
 }
 .list4 li a {
-	font: bold 13px/18px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 13px/18px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #000000;
 	margin-bottom: 6px;
 	display: inline-block;
@@ -1708,7 +1708,7 @@ footer ul li a:hover {
 }
 .list6 li a {
 	color: #2d2d2d;
-	font: bold 24px/26px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 24px/26px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	text-transform: uppercase;
 	display: inline-block;
 	margin-bottom: 9px;
@@ -1725,7 +1725,7 @@ footer ul li a:hover {
 	margin: 0;
 	box-shadow: none;
 	text-shadow: none;
-	font: 30px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 30px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #ffffff;
 	background: #f4cc6c;
 	width: 52px;
@@ -1787,7 +1787,7 @@ footer ul li a:hover {
 	outline: none;
 	border: 1px solid #ffffff;
 	background: #ffffff;
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 18px;
 	color: #2e2e2e;
 	padding: 11px 14px 11px 14px;
@@ -1819,7 +1819,7 @@ footer ul li a:hover {
 	margin: 0;
 	outline: none;
 	border: none;
-	font: 300 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 300 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 18px;
 	color: #2e2e2e;
 	background: #ffffff;
@@ -1891,7 +1891,7 @@ footer ul li a:hover {
 	min-height: 50px;
 	margin: 0;
 	font-weight: normal;
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 18px;
 	color: #2e2e2e;
 }
@@ -1945,7 +1945,7 @@ footer ul li a:hover {
 	outline: none;
 	border: 1px solid #ffffff;
 	background: #ffffff;
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 18px;
 	color: #2e2e2e;
 	padding: 11px 14px 11px 14px;
@@ -2000,7 +2000,7 @@ footer ul li a:hover {
 	outline: none;
 	border: 1px solid #ffffff;
 	background: #ffffff;
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	line-height: 18px;
 	color: #2e2e2e;
 	padding: 11px 14px 11px 14px;
