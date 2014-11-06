@@ -39,7 +39,7 @@ p {
 }
 
 p {
-    font: 12px/1.62 Helvetica,Arial,sans-serif;
+    font: 12px/1.62 "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 }
 
 
@@ -150,7 +150,7 @@ h1 {
 	background: #f43b60;
 	border-radius: 49px;
 	text-align: center;
-	font: 12px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 12px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -170,7 +170,7 @@ h1 {
 	color: #2e2e2e;
 }
 .thumb-pad3 .thumbnail .caption .lnk {
-	font: 300 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 300 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;;
 	color: #2e2e2e;
 	display: inline-block;
 	margin-bottom: 13px;
@@ -243,7 +243,7 @@ h1 {
 }
 .thumb-pad5 .thumbnail .caption a {
 	color: #2e2e2e;
-	font: bold 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: bold 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	display: inline-block;
 	margin-bottom: 7px;
 	-webkit-transition: all 0.25s ease;
@@ -305,7 +305,7 @@ h1 {
 	line-height: 20px;
 }
 .thumb-pad6 .thumbnail .badgeBox p > .lnk {
-	font: 14px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 14px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	color: #2e2e2e;
 	text-transform: none;
 }
@@ -337,7 +337,7 @@ h1 {
 }
 .thumb-pad6 .thumbnail .badgeBox a {
 	color: #272727;
-	font: 16px/22px 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+	font: 16px/22px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 	margin: 0;
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -349,7 +349,7 @@ h1 {
 }
 .thumb-pad6 .thumbnail .badgeBox a.tl {
 	color: #ffd64f;
-	font: 300 20px/25px 'Open Sans';
+	font: 300 20px/25px "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
     display: inline-block;
     margin: 0 0 5px;
     text-transform: uppercase;
@@ -368,7 +368,7 @@ h1 {
 }
 
 .pl {
-    font: 12px/150% Arial,Helvetica,sans-serif;
+    font: 12px/150% "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
     color: #666;
 }
 
@@ -458,7 +458,7 @@ h1 {
 }
 
 body, td, th {
-    font: 12px/1.62 Helvetica,Arial,sans-serif;
+    font: 12px/1.62 "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 }
 
 /*view页显示数据内容介绍*/
@@ -471,7 +471,7 @@ body, td, th {
     color: #111;
 }
 .h2 {
-    font: 15px/150% Arial,Helvetica,sans-serif;
+    font: 15px/150% "Helvetica Neue","Microsoft YaHei",Helvetica,Arial,sans-serif;
 }
 
 .ebook-promotion {
